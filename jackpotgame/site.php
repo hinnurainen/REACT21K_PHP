@@ -42,12 +42,12 @@ while ($jackpotCounter < $JACKPOT_TO_BE_WON) {
         $counter = 0;
 
         while ($counter < 5) {
-            echo `Checking if element at index ${counter} is 1 or 0`;
+            echo "Checking if element at index $counter is 1 or 0";
 
             if ($chosenNumbers[$counter] === 1) {
                 echo 'It is 1';
                 $oneCounter++;
-            } else if ($chosenNumbers[$counter] === 0) {
+            } elseif ($chosenNumbers[$counter] === 0) {
                 echo 'It is 0';
                 $zeroCounter++;
             }
@@ -55,7 +55,7 @@ while ($jackpotCounter < $JACKPOT_TO_BE_WON) {
             $counter++;
         }
 
-        echo `Found ${oneCounter} ones and ${zeroCounter} zeroes`;
+        echo "Found $oneCounter ones and $zeroCounter zeroes";
 
         if ($oneCounter === 5) {
             $winningStatus = true;
@@ -71,9 +71,9 @@ while ($jackpotCounter < $JACKPOT_TO_BE_WON) {
         }
     }
 }
-echo `${roundPlayed} rounds have been played until ${JACKPOT_TO_BE_WON} jackpots are won`;
-echo`${$roundPlayed * $COST_OF_ONE_ROUND} EUR was spent to win that ${JACKPOT_TO_BE_WON} jackpots`;
-echo`${$roundPlayed * $COST_OF_ONE_ROUND / $JACKPOT_TO_BE_WON} EUR was spent on average to win a single jackpot`;
+echo "$roundPlayed rounds have been played until $JACKPOT_TO_BE_WON jackpots are won";
+echo "$roundPlayed * $COST_OF_ONE_ROUND EUR was spent to win that $JACKPOT_TO_BE_WON jackpots";
+echo "$roundPlayed * $COST_OF_ONE_ROUND / $JACKPOT_TO_BE_WON EUR was spent on average to win a single jackpot";
 ?>
 </body>
 </html>
