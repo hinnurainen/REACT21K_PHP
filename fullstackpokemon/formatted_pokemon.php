@@ -10,7 +10,7 @@ $page_number = $_GET['page'];
 if ($page_number >= 0 && $page_number < (ceil(count($results)/50))) {
     $formatted_results = array();
 
-    for ($i = 0; $i <= count($results); $i++){
+    for ($i = 0; $i < count($results); $i++){
         // $results[$i]['name'] = strtoupper($results[$i]['name']); Notice that this is illegal 
         $formatted_results[$i]['name'] = strtoupper($results[$i]['name']);
         $formatted_results[$i]['url'] = $results[$i]['url'];
