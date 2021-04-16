@@ -53,99 +53,99 @@ $result = "";
      $remainer = $mynumber - 10;
      switch($remainer) {
         case 1:
-             $result += 'yksi';
+             $result .= 'yksi';
              break;
         case 2:
-            $result += 'kaksi';
+            $result .= 'kaksi';
             break;
         case 3:
-            $result += 'kolme';
+            $result .= 'kolme';
             break;
         case 4:
-            $result += 'neljä';
+            $result .= 'neljä';
             break;
         case 5:
-            $result += 'viisi';
+            $result .= 'viisi';
             break;
         case 6:
-            $result += 'kuusi';
+            $result .= 'kuusi';
             break;
         case 7:
-            $result += 'seitsemän';
+            $result .= 'seitsemän';
             break;
         case 8:
-            $result += 'kahdeksan';
+            $result .= 'kahdeksan';
             break;
         case 9:
-            $result += 'yhdeksän';
+            $result .= 'yhdeksän';
             break;
         default:
             break;
         }
-        $result += 'toista';
+        $result .= 'toista';
 } elseif (20 <= $mynumber && $mynumber <= 99) {
     $module = floor($mynumber / 10);
     $remainder = $mynumber % 10;
     switch($module) {
              case 1:
-                 $result += 'yksi';
+                 $result .= 'yksi';
                  break;
              case 2:
-                 $result += 'kaksi';
+                 $result .= 'kaksi';
                  break;
              case 3:
-                 $result += 'kolme';
+                 $result .= 'kolme';
                  break;
              case 4:
-                 $result += 'neljä';
+                 $result .= 'neljä';
                  break;
              case 5:
-                 $result += 'viisi';
+                 $result .= 'viisi';
                  break;
              case 6:
-                 $result += 'kuusi';
+                 $result .= 'kuusi';
                  break;
              case 7:
-                 $result += 'seitsemän';
+                 $result .= 'seitsemän';
                  break;
              case 8:
-                 $result += 'kahdeksan';
+                 $result .= 'kahdeksan';
                  break;
             case 9:
-                $result += 'yhdeksän';
+                $result .= 'yhdeksän';
                 break;
             default:
                 break;
          }
-        $result += 'kymmentä';
+        $result .= 'kymmentä';
 
          switch($remainder) {
             case 1:
-                 $result += 'yksi';
+                 $result .= 'yksi';
                  break;
             case 2:
-                $result += 'kaksi';
+                $result .= 'kaksi';
                 break;
             case 3:
-                $result += 'kolme';
+                $result .= 'kolme';
                 break;
             case 4:
-                $result += 'neljä';
+                $result .= 'neljä';
                 break;
             case 5:
-                $result += 'viisi';
+                $result .= 'viisi';
                 break;
             case 6:
-                $result += 'kuusi';
+                $result .= 'kuusi';
                 break;
             case 7:
-                $result += 'seitsemän';
+                $result .= 'seitsemän';
                 break;
             case 8:
-                $result += 'kahdeksan';
+                $result .= 'kahdeksan';
                 break;
             case 9:
-                $result += 'yhdeksän';
+                $result .= 'yhdeksän';
                 break;
             default:
                 break;
