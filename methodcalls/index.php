@@ -34,7 +34,7 @@ function get_recipes() {
     if(!isset($GLOBALS['exploded_parts'][2])) {
         echo $GLOBALS['data'];
     } else {
-        echo json_encode(array('recipe' => 'here is your recipe'));
+        echo $GLOBALS['$params']['name'];
     }
 }
 
@@ -45,8 +45,11 @@ function add_new_recipe() {
         "image" => $_POST['image'],
         "ingredients" => $_POST['ingredients'],
         "instructions" => $_POST['instructions']
-    )
-};
+    );
+    array_push($data[recipes], $new_recipe);
+    $json_formatted_data=json_encode($data[recipes]);
+    $new_recipe_to_file=file_put_contents('data.json', $json_formatted_data);
+}
 
 function update_recipe() {
     $updated_recipe = array (
@@ -55,8 +58,11 @@ function update_recipe() {
         "image" => $_PUT['image'],
         "ingredients" => $_PUT['ingredients'],
         "instructions" => $_PUT['instructions']
-    )
-};
+    );
+    array_push($params, $updated_recipe);
+    $json_formatted_data=json_encode($params);
+    $updated_recipe_to_file=file_put_contents('data.json', $json_formatted_data);
+}
 
 function remove_recipe() {
     $removed_recipe = array (
@@ -65,8 +71,11 @@ function remove_recipe() {
         "image" => $_DELETE['image'],
         "ingredients" => $_DELETE['ingredients'],
         "instructions" => $_DELETE['instructions']
-    )
-};
+    );
+    array_push($params, $removed_recipe);
+    $json_formatted_data=json_encode($params);
+    $removed_recipe_to_file=file_put_contents('data.json', $json_formatted_data);
+}
 
 // echo '<pre>';
 // print_r($_SERVER);
